@@ -9,52 +9,57 @@ const BUTCHER_PRODUCTS = [
 ]
 
 // Define these exported classes
+// Define these exported classes
 export class OlderCoaster extends Component {
+
+  // this function should return the JSX we want the DOM to render
   render() {
     return (
-      <div>class="oldercoaster"<
+      <div class="oldercoaster">
         <p>Two grannies having the time of their life!</p>
         <p>Passengers:</p>
         <ul>
           <li>Agnes</li>
           <li>Muriel</li>
         </ul>
-      /div>
+      </div>
     )
   }
 
 }
 
 export class InFrontOfYou extends Component {
+  // your code here
   render() {
-    <div>
-      <p>You shouldnt look too far.</p>
-
-      <p>"Sometimes, the solution is right in front of you."</p>
-    </div>
+    return(
+      <div>
+        <p>You shouldn't look too far.</p>
+        <p>Sometimes, the solution is right in front of you.</p>
+      </div>
+    )
   }
 }
-
 export class ButcherShop extends Component {
+  // your code here
   render() {
-    <div className="butcher-shop">
-  <p>Hello! We have the following products for sale today:</p>
-  <ul>
-    <li>"Tenderloin"</li>
-    <li>"Short ribs"</li>
-    <li>"Beef shin"</li>
-    <li>"Ribeye"</li>
-  </ul>
-</div>
+    const products = BUTCHER_PRODUCTS.map((p, idx) => (<li key={idx}>{p}</li>));
+    return(
+      <div class="butcher-shop">
+        <p>Hello! We have the following products for sale today:</p>
+        <ul>
+          { products }
+        </ul>
+      </div>
+    )
   }
 }
-
-
 export class App extends Component {
   render() {
     return (
       <div id="app">
-
+        <OlderCoaster />
+        <InFrontOfYou />
+        <ButcherShop />
       </div>
     )
   }
