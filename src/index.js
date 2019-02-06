@@ -13,11 +13,11 @@ export class OlderCoaster extends Component {
   render() {
     return (
       <div>class="oldercoaster"<
-        <p>"Two grannies having the time of their life!"</p>
-        <p>"Passengers:"</p>
+        <p>Two grannies having the time of their life!</p>
+        <p>Passengers:</p>
         <ul>
-          <li>"Agnes"</li>
-          <li>"Muriel"</li>
+          <li>Agnes</li>
+          <li>Muriel</li>
         </ul>
       /div>
     )
